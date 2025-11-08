@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="logo">Habitha.dev</div>
+
+    <div class="nav-actions" style="display:flex;align-items:center;gap:1rem;">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+        <a routerLink="/projects" routerLinkActive="active">Projects</a>
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+
+        <!-- theme button -->
+        <button class="theme-toggle" (click)="toggleTheme()">
+            <ng-container *ngIf="!darkMode(); else darkTpl">🌙 Dark</ng-container>
+            <ng-template #darkTpl>☀️ Light</ng-template>
+        </button>
+    </div>
+</nav>
